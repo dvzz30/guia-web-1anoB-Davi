@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Profissional de Desenvolvimento Web</title>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Guia Profissional de Desenvolvimento Web</h1>
+            <button aria-label="Menu" id="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul id="main-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Desenvolvimento Web Profissional</h2>
+            <p>Seu guia completo para entender as tecnologias e melhores práticas do desenvolvimento web moderno.</p>
+            <a href="#fundamentos" class="btn-primary">Começar</a>
+        </section>
+
+        <section id="fundamentos" class="tech-cards">
+            <h2>O que é HTML, CSS e JS?</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p>HTML é a linguagem de marcação que estrutura o conteúdo da web, definindo elementos como títulos, parágrafos, imagens e links.</p>
+                    <pre><code>&lt;h1&gt;Título&lt;/h1&gt;
+&lt;p&gt;Parágrafo&lt;/p&gt;</code></pre>
+                    <p class="when-to-use">Use para estruturar e organizar o conteúdo da página web.</p>
+                </article>
+
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p>CSS é a linguagem de estilização que controla a aparência e o layout dos elementos HTML.</p>
+                    <pre><code>.card {
+    color: #111827;
+    padding: 1rem;
+}</code></pre>
+                    <p class="when-to-use">Use para estilizar e criar layouts responsivos.</p>
+                </article>
+
+                <article class="card">
+                    <h3>JavaScript</h3>
+                    <p>JavaScript é a linguagem de programação que adiciona interatividade e comportamento dinâmico às páginas web.</p>
+                    <pre><code>document.querySelector('.btn')
+    .addEventListener('click', 
+    () => alert('Clicou!'));</code></pre>
+                    <p class="when-to-use">Use para adicionar interatividade e manipular dados.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
