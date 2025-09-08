@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Guia Profissional de Desenvolvimento Web</title>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Guia Profissional de Desenvolvimento Web</h1>
+            <button aria-label="Menu" id="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul id="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+                <li><a href="quiz.html" aria-current="page">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="quiz-container">
+        <section class="quiz-intro active" id="quiz-intro">
+            <h2>Teste seus Conhecimentos</h2>
+            <p>Este quiz vai testar seu conhecimento sobre desenvolvimento web. São 10 perguntas sobre HTML, CSS e JavaScript.</p>
+            <div class="quiz-info">
+                <div class="info-item">
+                    <strong>10</strong>
+                    <span>Perguntas</span>
+                </div>
+                <div class="info-item">
+                    <strong>10</strong>
+                    <span>Minutos</span>
+                </div>
+                <div class="info-item">
+                    <strong>70%</strong>
+                    <span>Para Passar</span>
+                </div>
+            </div>
+            <button class="btn-primary" id="start-quiz">Começar Quiz</button>
+        </section>
+
+        <section class="quiz-questions" id="quiz-questions">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="question-counter">
+                    Pergunta <span id="current-question">1</span> de <span id="total-questions">10</span>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <!-- As perguntas serão inseridas aqui via JavaScript -->
+            </div>
+
+            <div class="quiz-controls">
+                <button class="btn-secondary" id="prev-question" disabled>Anterior</button>
+                <button class="btn-primary" id="next-question">Próxima</button>
+            </div>
+        </section>
+
+        <section class="quiz-results" id="quiz-results">
+            <h2>Resultados</h2>
+            <div class="results-circle">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="#eee"
+                        stroke-width="3" />
+                    <path d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="var(--color-primary)"
+                        stroke-width="3"
+                        id="results-circle" />
+                </svg>
+                <div class="percentage">
+                    <span id="score-percentage">0</span>%
+                </div>
+            </div>
+            <p class="results-message" id="results-message"></p>
+            <div class="results-stats">
+                <div class="stat-item correct">
+                    <span class="stat-value" id="correct-answers">0</span>
+                    <span class="stat-label">Corretas</span>
+                </div>
+                <div class="stat-item wrong">
+                    <span class="stat-value" id="wrong-answers">0</span>
+                    <span class="stat-label">Incorretas</span>
+                </div>
+            </div>
+            <button class="btn-primary" id="retry-quiz">Tentar Novamente</button>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
